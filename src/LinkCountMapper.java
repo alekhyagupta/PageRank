@@ -21,11 +21,7 @@ public class LinkCountMapper extends MapReduceBase implements Mapper<LongWritabl
 
     public void map(LongWritable key, Text value, OutputCollector<LongWritable, NullWritable> output, Reporter reporter) throws IOException {
 
-        //String page = value.toString();
         final LongWritable one = new LongWritable(1);
-
-        //String title = "";
-
         output.collect(one, NullWritable.get());
     }
 }
